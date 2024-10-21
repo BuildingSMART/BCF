@@ -75,6 +75,7 @@
                         <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:attribute name="Guid" type="Guid" use="required"/>
+                                <xs:attribute name="ReleationType" type="TopicRelationType" use="optional"/>
                             </xs:complexType>
                         </xs:element>
                     </xs:sequence>
@@ -150,4 +151,12 @@
         </xs:sequence>
         <xs:attribute name="Guid" type="Guid" use="required"/>
     </xs:complexType>
+</xs:complexType>
+<xs:simpleType name="TopicRelationType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Relates"/>
+        <xs:enumeration value="Parent"/>
+        <xs:enumeration value="Child"/>
+    </xs:restriction>
+</xs:simpleType>
 </xs:schema>
