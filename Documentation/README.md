@@ -287,6 +287,8 @@ In summary, after applying the following viewpoint:
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VisualizationInfo Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
+	<CreationDate>2024-10-21T12:42:36.513Z</CreationDate>
+	<CreationAuthor>bim@example.com</CreationAuthor>
   <Components>
     <TopicFileIds>
       <TopicFileId Id="4186dcbf-8b7d-4226-b9a8-7bf5b9747eb1" />

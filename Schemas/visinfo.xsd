@@ -7,6 +7,8 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="CreationDate" type="xs:dateTime"/>
+                <xs:element name="CreationAuthor" type="NonEmptyOrBlankString"/>
                 <!-- The TopicFileIds element lists the model files this viewpoint is supposed to load.-->
                 <xs:element name="TopicFileIds" type="TopicFileIds" minOccurs="0"/>
                 <!--
