@@ -8,7 +8,7 @@
                 <xs:element name="TopicTypes" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="TopicType" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="TopicType" type="TopicType" minOccurs="0" maxOccurs="unbounded"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -29,7 +29,7 @@
                 <xs:element name="TopicLabels" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="TopicLabel" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="TopicLabel" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -50,4 +50,17 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:complexType name="TopicType">
+        <xs:simpleContent>
+            <xs:extension base="NonEmptyOrBlankString">
+                <xs:attribute name="StatusType" type="TopicLabelEnum" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+        <xs:simpleType name="TopicLabelEnum">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="open"/>
+                <xs:enumeration value="closed"/>
+            </xs:restriction>
+        </xs:simpleType>
 </xs:schema>
