@@ -561,6 +561,14 @@ Lines can be used to add markup in 3D. Each line is defined by three dimensional
 
 ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction. The Direction vector points in the _invisible_ direction meaning the half-space that is clipped.
 
+### Markers (optional)
+
+A marker is a way to pinpoint a location in the 3D model. Each vendor can decide how these markers should be rendered.
+
+**Best practice**
+Render the markers based on the topic properties.
+Example: Red markers for open topics, and green markers for closed topics
+
 ### Bitmap (optional)
 
 A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:

@@ -31,6 +31,13 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="Markers" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Marker" type="Marker" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="Bitmaps" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
@@ -215,6 +222,11 @@
         <xs:sequence>
             <xs:element name="Location" type="Point"/>
             <xs:element name="Direction" type="Direction"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Marker">
+        <xs:sequence>
+            <xs:element name="Location" type="Point"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="Bitmap">
